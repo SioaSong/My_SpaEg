@@ -156,7 +156,7 @@ Next, create an indexer based on the created indexer xml file.
 ./bin/hbase-indexer add-indexer -n myindexer -c indexdemo-indexer.xml \
         -cp solr.zk=localhost:2181/solr -cp solr.collection=collection1
 ```
-__注意此处：solr.zk=localhost:2181/solr 与之前启动solr的配置有关，可在页面查看 solr的 zkHost参数值确定此处内容 __
+__注意此处：solr.zk=localhost:2181/solr 与之前启动solr的配置有关，可在页面查看 solr的 zkHost参数值确定此处内容 __<br>
 Note that the above command assumes that ZooKeeper is running on localhost on port 2181, and that there is a Solr Core called "collection1" configured. If you are doing this tutorial on an existing HBase/Solr environment, you may need to use different settings.
 
 Update the table content
