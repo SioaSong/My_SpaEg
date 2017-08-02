@@ -109,4 +109,4 @@ Assuming that you've downloaded Solr 4.2.0 and you're running ZooKeeper on the c
 cd $SOLR_HOME/example
 java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf -DzkHost=localhost:2181/solr  -jar start.jar
 ```
-<font color=blue size=7> -DzkHost的值视solr定义而定 <\font>
+<font color=blue size=7> -DzkHost的值视solr定义而定 </font>
