@@ -95,13 +95,18 @@ Add the settings below to your hbase-site.xml configuration on all HBase region 
 __Add indexer jars to HBase__
 
 The HBase Indexer includes two jar files that need to be in the classpath of HBase. Copy these from the lib directory of the unpacked hbase-indexer installation into the lib directory of HBase for each region server.
-
+> 
+```
 cp lib/hbase-sep-* $HBASE_HOME/lib
-Start Solr
+```
+__Start Solr__
 
 Ensure that Solr is running. In general, it's easiest to have Solr use the same ZooKeeper instance as HBase.
 
 Assuming that you've downloaded Solr 4.2.0 and you're running ZooKeeper on the current machine, you can start up the base Solr in cloud mode using the example schema as follows:
-
+> 
+```
 cd $SOLR_HOME/example
-java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf -DzkHost=loc
+java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf -DzkHost=localhost:2181/solr  -jar start.jar
+```
+<font color=blue size=7> -DzkHost的值视solr定义而定 <\font>
