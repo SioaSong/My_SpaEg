@@ -26,10 +26,9 @@ HBase should be configured to use HDFS as its filesystem -- HBase Indexer is not
 Installation
 ------------
 
-<font color=#0099ff>This page explains how to do a basic installation of the HBase Indexer on a single machine.</font><br>
+_This page explains how to do a basic installation of the HBase Indexer on a single machine._<br>
 
-Before you start, make sure that you have the required software installed (they can all be running on single machine).
-
+Before you start, make sure that you have the required software installed (they can all be running on single machine).<br>
 Get the HBase Indexer
 
 Check out the code and build the tar.gz distribution.
@@ -38,12 +37,15 @@ git clone git://github.com/NGDATA/hbase-indexer.git
 mvn clean package -Pdist -DskipTests
 Next, unpackage the tar.gz distribution (in the example below it is unpacked under your $HOME directory).
 
+```
 tar zxvf hbase-indexer-dist/target/hbase-indexer-1.0-SNAPSHOT.tar.gz -C ~
 cd ~/hbase-indexer-1.0-SNAPSHOT
 Configure HBase Indexer
+```
 
 In the hbase-indexer directory, edit the file conf/hbase-indexer-site.xml and configure the ZooKeeper connection string (twice, once for hbase-indexer, and once for hbase, alternatively you can copy your hbase-site.xml to the conf directory).
-
+> 
+```
 <property>
   <name>hbaseindexer.zookeeper.connectstring</name>
   <value>zookeeperhost</value>
@@ -52,6 +54,7 @@ In the hbase-indexer directory, edit the file conf/hbase-indexer-site.xml and co
   <name>hbase.zookeeper.quorum</name>
   <value>zookeeperhost</value>
 </property>
+```
 If you have not defined JAVA_HOME globally, and the bin/hbase-indexer script would complain it doesn't find you Java, you can set the JAVA_HOME in the script conf/hbase-indexer-env.sh.
 
 Configure HBase
