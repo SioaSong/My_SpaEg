@@ -63,6 +63,7 @@ In order to use the HBase Indexer, replication must be enabled in HBase. There a
 
 Add the settings below to your hbase-site.xml configuration on all HBase region servers, and restart HBase.
 
+```
 <configuration>
   <!-- SEP is basically replication, so enable it -->
   <property>
@@ -90,7 +91,8 @@ Add the settings below to your hbase-site.xml configuration on all HBase region 
     <value>com.ngdata.sep.impl.SepReplicationSource</value>
   </property>
 </configuration>
-Add indexer jars to HBase
+```
+__Add indexer jars to HBase__
 
 The HBase Indexer includes two jar files that need to be in the classpath of HBase. Copy these from the lib directory of the unpacked hbase-indexer installation into the lib directory of HBase for each region server.
 
