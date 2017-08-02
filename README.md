@@ -7,9 +7,9 @@ https://github.com/NGDATA/hbase-indexer.wiki.git<br>
 Clone in Desktop</br>
 The following software is required for running the HBase Indexer:
 
-HBase 0.94.x
-Solr 4.x in cloud mode
-ZooKeeper 3.x (required by the two above packages)
+*HBase 0.94.x<br>
+*Solr 4.x in cloud mode<br>
+*ZooKeeper 3.x (required by the two above packages)<br>
 All components can be run on a single machine, or they can be run on multiple machines on a cluster.
 
 ###Details
