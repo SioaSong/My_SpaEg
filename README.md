@@ -4,7 +4,7 @@ Requirements
 ------------
 
 https://github.com/NGDATA/hbase-indexer.wiki.git<br>
-Clone in Desktop</br>
+Clone in Desktop
 The following software is required for running the HBase Indexer:
 
 *HBase 0.94.x<br>
