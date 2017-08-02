@@ -183,3 +183,14 @@ Finally, delete the row from HBase.
 hbase> deleteall 'indexdemo-user', 'row1'
 ```
 You can now verify that the data has been deleted from Solr.
+> 
+```
+./bin/hbase-indexer add-indexer -n Testindexer -c /gfire/YsFiel/hbindexdemo-Yanis.xml -cp solr.zk=localhost:2181 -cp solr.collection=indexer_test
+
+create 'indexdemoTest', { NAME => 'info', REPLICATION_SCOPE => '1' }
+
+hbase> put 'indexdemoTest', 'row1', 'info:firstname', 'John'
+hbase> put 'indexdemoTest', 'row1', 'info:lastname', 'Smith'
+
+hbase> deleteall 'indexdemo-user', 'row1'
+```
